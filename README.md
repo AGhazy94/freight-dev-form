@@ -1,27 +1,23 @@
-# freight-dev-form-dropdown
+# Studio Freight Dropdown Component
 
-This template should help get you started developing with Vue 3 in Vite.
+A Vue 3 implementation of a custom dropdown/select component with a drawer interface, created as a frontend development assignment for Studio Freight.
 
-## Recommended IDE Setup
+## Features
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- **Custom Dropdown Component**: Fully accessible custom select with keyboard navigation
+- **Drawer Interface**: Right-side sliding drawer with smooth animations
+- **Responsive Design**: Mobile-friendly layout that adapts to different screen sizes
+- **Accessibility**: ARIA attributes, focus management, and keyboard support
+- **Animations**: Subtle GSAP-enhanced animations with CSS fallbacks
+- **TypeScript**: Full TypeScript support for type safety
 
-## Recommended Browser Setup
+## Tech Stack
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Vue 3 with Composition API
+- TypeScript
+- Vue Router
+- GSAP for animations
+- Vite for build tooling
 
 ## Project Setup
 
@@ -29,20 +25,113 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Development
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Build for Production
 
 ```sh
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+### Type Checking
+
+```sh
+npm run type-check
+```
+
+### Linting
 
 ```sh
 npm run lint
 ```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Drawer.vue          # Right-side drawer component
+│   └── CustomSelect.vue    # Custom dropdown/select component
+├── views/
+│   ├── HomeView.vue        # Landing page
+│   ├── AboutView.vue       # About page
+│   └── ContactView.vue     # Contact page with drawer form
+├── utils/
+│   └── animations.ts       # GSAP animation utilities
+├── router/
+│   └── index.ts            # Vue Router configuration
+├── assets/
+│   └── main.css            # Global styles
+└── App.vue                 # Root component with navigation
+```
+
+## Component Features
+
+### CustomSelect Component
+
+- Keyboard navigation (Arrow keys, Enter, Escape, Tab)
+- ARIA attributes for screen readers
+- Click outside to close
+- Custom styling with smooth animations
+- Option highlighting and selection
+
+### Drawer Component
+
+- Right-side slide-in animation
+- Backdrop click to close
+- Escape key to close
+- Focus trap and restoration
+- Responsive design
+
+## Deployment
+
+### Vercel
+
+1. Connect your repository to Vercel
+2. Vercel will automatically detect the Vue.js framework
+3. Configure build settings:
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+   - **Install Command**: `npm install`
+4. Deploy!
+
+### Netlify
+
+1. Connect your repository to Netlify
+2. Configure build settings:
+   - **Build command**: `npm run build`
+   - **Publish directory**: `dist`
+3. Add environment variables if needed
+4. Deploy!
+
+### Manual Deployment
+
+```sh
+# Build the project
+npm run build
+
+# The dist/ folder contains the production-ready files
+# Upload this folder to your hosting provider
+```
+
+## Development Notes
+
+- The project uses CSS animations as primary animation method with GSAP for enhanced effects
+- All components are fully accessible with proper ARIA attributes
+- The implementation follows Vue 3 best practices with Composition API
+- TypeScript is used throughout for better type safety and developer experience
+
+## Browser Support
+
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers
+
+## License
+
+MIT License - feel free to use this project for learning or reference.
