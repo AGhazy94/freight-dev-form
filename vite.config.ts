@@ -7,7 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  publicDir: '/freight-dev-form',
+  base: process.env.NODE_ENV === 'production' ? '/freight-dev-form/' : './',
   plugins: [vue(), vueJsx(), vueDevTools()],
   resolve: {
     alias: {
