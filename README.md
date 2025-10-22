@@ -1,137 +1,54 @@
-# Studio Freight Dropdown Component
+# Studio Freight — Custom Dropdown & Drawer (Vue 3 + TypeScript)
 
-A Vue 3 implementation of a custom dropdown/select component with a drawer interface, created as a frontend development assignment for Studio Freight.
+A compact Vue 3 + TypeScript frontend demo that implements an accessible custom select (dropdown) and a right-side drawer used for a contact form. It's built with Vite and optionally uses GSAP for enhanced animations.
 
-## Features
+Key points:
 
-- **Custom Dropdown Component**: Fully accessible custom select with keyboard navigation
-- **Drawer Interface**: Right-side sliding drawer with smooth animations
-- **Responsive Design**: Mobile-friendly layout that adapts to different screen sizes
-- **Accessibility**: ARIA attributes, focus management, and keyboard support
-- **Animations**: Subtle GSAP-enhanced animations with CSS fallbacks
-- **TypeScript**: Full TypeScript support for type safety
+- Accessible custom select with keyboard support and ARIA attributes
 
-## Tech Stack
+- Responsive drawer component with backdrop, escape-to-close, and focus management
 
-- Vue 3 with Composition API
-- TypeScript
-- Vue Router
-- GSAP for animations
-- Vite for build tooling
+- Lightweight, designed as a small frontend assignment/demo
 
-## Project Setup
+Quick start
+
+1. Install dependencies
 
 ```sh
 npm install
 ```
 
-### Development
+1. Start dev server
 
 ```sh
 npm run dev
 ```
 
-### Build for Production
+1. Build for production
 
 ```sh
 npm run build
 ```
 
-### Type Checking
+Project layout (important files)
 
-```sh
-npm run type-check
-```
+- `src/components/CustomSelect.vue` — custom dropdown/select
+- `src/components/Drawer.vue` — right-side drawer
+- `src/views/HomeView.vue` — demo page
+- `src/main.ts` and `src/App.vue` — app entry and root
+- `vite.config.ts`, `package.json` — build and scripts
 
-### Linting
+Notes
 
-```sh
-npm run lint
-```
+- TypeScript and Vue 3 Composition API are used throughout.
+- GSAP is optional; CSS handles core animations.
+- The project is intended as a self-contained UI demo and is MIT-licensed.
 
-## Project Structure
+Contributing / Deploy
 
-```
-src/
-├── components/
-│   ├── Drawer.vue          # Right-side drawer component
-│   └── CustomSelect.vue    # Custom dropdown/select component
-├── views/
-│   ├── HomeView.vue        # Landing page
-│   ├── AboutView.vue       # About page
-│   └── ContactView.vue     # Contact page with drawer form
-├── utils/
-│   └── animations.ts       # GSAP animation utilities
-├── router/
-│   └── index.ts            # Vue Router configuration
-├── assets/
-│   └── main.css            # Global styles
-└── App.vue                 # Root component with navigation
-```
+- Run the dev server with `npm run dev` and make changes in `src/`.
+- Deploy the built `dist/` folder to any static host (Vercel, Netlify, etc.).
 
-## Component Features
+License
 
-### CustomSelect Component
-
-- Keyboard navigation (Arrow keys, Enter, Escape, Tab)
-- ARIA attributes for screen readers
-- Click outside to close
-- Custom styling with smooth animations
-- Option highlighting and selection
-
-### Drawer Component
-
-- Right-side slide-in animation
-- Backdrop click to close
-- Escape key to close
-- Focus trap and restoration
-- Responsive design
-
-## Deployment
-
-### Vercel
-
-1. Connect your repository to Vercel
-2. Vercel will automatically detect the Vue.js framework
-3. Configure build settings:
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-   - **Install Command**: `npm install`
-4. Deploy!
-
-### Netlify
-
-1. Connect your repository to Netlify
-2. Configure build settings:
-   - **Build command**: `npm run build`
-   - **Publish directory**: `dist`
-3. Add environment variables if needed
-4. Deploy!
-
-### Manual Deployment
-
-```sh
-# Build the project
-npm run build
-
-# The dist/ folder contains the production-ready files
-# Upload this folder to your hosting provider
-```
-
-## Development Notes
-
-- The project uses CSS animations as primary animation method with GSAP for enhanced effects
-- All components are fully accessible with proper ARIA attributes
-- The implementation follows Vue 3 best practices with Composition API
-- TypeScript is used throughout for better type safety and developer experience
-
-## Browser Support
-
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers
-
-## License
-
-MIT License - feel free to use this project for learning or reference.
+MIT
