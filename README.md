@@ -49,6 +49,17 @@ Contributing / Deploy
 - Run the dev server with `npm run dev` and make changes in `src/`.
 - Deploy the built `dist/` folder to any static host (Vercel, Netlify, etc.).
 
+GitHub Pages deployment (project site)
+
+This repository includes a GitHub Actions workflow at `.github/workflows/deploy.yml` that builds the site and deploys the `dist` folder to GitHub Pages on pushes to the `dev` branch.
+
+- Vite `base` is configured in `vite.config.ts` as `base: '/freight-dev-form/'` so assets are referenced correctly when hosted at `https://<your-user>.github.io/freight-dev-form/`.
+- To deploy manually from your machine (optional):
+  1.  Build the project: `npm run build`
+  2.  Publish `dist` to GitHub Pages using the `gh-pages` tool: `npm run deploy` (this runs `npx gh-pages -d dist`).
+
+If you rename the repository or use a custom domain, update the `base` value in `vite.config.ts` and, if needed, the GitHub Pages settings in your repository under Settings -> Pages.
+
 License
 
 MIT
