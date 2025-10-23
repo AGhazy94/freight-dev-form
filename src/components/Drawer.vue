@@ -189,7 +189,7 @@ onUnmounted(() => {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  transform: none;
+  overflow: auto;
 }
 
 .drawer-header {
@@ -199,6 +199,7 @@ onUnmounted(() => {
   padding: 4px;
   padding-bottom: 24px;
   position: relative;
+  margin-bottom: 24px;
 }
 
 .border {
@@ -228,7 +229,6 @@ onUnmounted(() => {
 
 .drawer-content {
   flex: 1;
-  overflow-y: auto;
 }
 
 @media (max-width: 768px) {

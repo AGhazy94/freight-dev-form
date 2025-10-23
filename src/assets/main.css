@@ -70,11 +70,13 @@ select:focus {
 /* Custom scrollbar for dropdown options */
 ::-webkit-scrollbar {
   width: 9px;
+  height: 9px;
 }
 
 ::-webkit-scrollbar-track {
   background: transparent;
   width: 9px;
+  height: 9px;
 }
 
 ::-webkit-scrollbar-thumb {
