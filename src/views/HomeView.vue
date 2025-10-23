@@ -36,11 +36,11 @@ const closeDrawer = () => {
 }
 
 .content {
-  margin-inline: 30px;
-  margin-top: 20px;
   display: flex;
-  justify-content: end;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 </style>
 
